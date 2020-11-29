@@ -1,0 +1,39 @@
+<div align="center">
+  <table>
+    <thead style="font-weight: bold; font-size: 15px">
+      <tr>
+        <th>Car ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Id</th>
+        <th>Mobile Number</th>
+        <th>License Number</th>
+        <th>Pickup and Drop Location</th>
+        <th>Pickup Date</th>
+        <th>Pickup Time</th>
+        <th>Drop of Date</th>
+        <th>Drop of Time</th>
+        <th>Selected Car</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let carrental of carrentals; let i = index">
+      <td>{{ carrental._id }}</td>
+      <td>{{ carrental.Ft_Nm }}</td>
+      <td>{{ carrental.Lt_Nm }}</td>
+      <td>{{ carrental.Em_ID }}</td>
+      <td>{{ carrental.Mbl_Num }}</td>
+      <td>{{ carrental.Lisn_Num }}</td>
+      <td>{{ carrental.p_d_loc }}</td>
+      <td>{{ carrental.pickup_dt }}</td>
+      <td>{{ carrental.pickup_tym }}</td>
+      <td>{{ carrental.dropoff_dt }}</td>
+      <td>{{ carrental.dropoff_tym }}</td>
+      <td>{{ carrental.find_my_car }}</td>
+      <td>
+        <button class="btn" (click)="onDelete(carrental._id)"><i class="fa fa-trash"></i> Delete</button>
+        <button class="btn1"  [routerLink]="['/editCarrental', carrental._id]"><i class="fa fa-trash"></i> Update</button>
+      </td>
+    </tr>
+  </table>
+</div>

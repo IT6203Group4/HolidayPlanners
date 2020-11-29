@@ -1,0 +1,28 @@
+<img [src]="img" style="width: 100%; height: 200px" />
+<br />
+<h1 style="width: auto">
+  <button mat-button>Home</button>
+  <button mat-button [matMenuTriggerFor]="aboveMenu">Itineraries</button>
+  <mat-menu #aboveMenu="matMenu" yPosition="above">
+    <button mat-menu-item routerLink="/listItineraries">
+      List Itineraries
+    </button>
+    <button mat-menu-item routerLink="/addItinerary">Add Itinerary</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="beforeMenu">Fly High</button>
+  <mat-menu #beforeMenu="matMenu" xPosition="before">
+    <button mat-menu-item routerLink="/listFlights">List Flights</button>
+    <button mat-menu-item routerLink="/addFlight">Add Flights</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="belowMenu">Where To Stay</button>
+  <mat-menu #belowMenu="matMenu" yPosition="below">
+    <button mat-menu-item routerLink="/listHotels">List Hotels</button>
+    <button mat-menu-item routerLink="/addHotel">Add Hotel</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="afterMenu">Entreprises</button>
+  <mat-menu #afterMenu="matMenu" xPosition="after">
+    <button mat-menu-item routerLink="/listCars">List Cars</button>
+    <button mat-menu-item routerLink="/addCar">Add Car</button>
+  </mat-menu>
+</h1>

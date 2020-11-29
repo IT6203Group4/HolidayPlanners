@@ -1,0 +1,29 @@
+<div align="center">
+  <table>
+    <thead style="font-weight: bold; font-size: 15px">
+      <tr>
+        <th>HotelID</th>
+        <th>Destination</th>
+        <th>Checkin</th>
+        <th>Checkout</th>
+        <th>Class</th>
+        <th>PropertyType</th>
+        <th>Guests</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tr *ngFor="let hotel of hotelsdata; let i = index">
+      <td>{{ hotel._id }}</td>
+      <td>{{ hotel.Destination }}</td>
+      <td>{{ hotel.Checkin }}</td>
+      <td>{{ hotel.Checkout }}</td>
+      <td>{{ hotel.Class }}</td>
+      <td>{{ hotel.PropertyType }}</td>
+      <td>{{ hotel.Guests }}</td>
+      <td>
+        <button class="btn" (click)="onDelete(hotel._id)"><i class="fa fa-trash"></i> Delete</button>
+        <button class="btn1"  [routerLink]="['/edithotel', hotel._id]"><i class="fa fa-trash"></i> Update</button>
+      </td>
+    </tr>
+  </table>
+</div>

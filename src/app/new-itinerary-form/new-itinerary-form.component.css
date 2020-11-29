@@ -1,0 +1,15 @@
+.button {
+    background-color: transparent;
+    border: 0;
+    color: #fefbef;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1;
+    margin-top: 1.5rem;
+    width: 100%; /* Large, mobile-friendly touch target */}
+  .mat-form-field {
+      display: inline-block;
+      position: relative;
+      text-align: left;
+      width:21%;
+  }

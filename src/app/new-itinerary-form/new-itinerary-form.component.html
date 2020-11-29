@@ -1,0 +1,98 @@
+<div id="myDiv" >
+    <h3>{{mode}}Itinerary Request Form</h3>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+
+
+        <mat-form-field appearance="fill">
+            <input
+              matInput
+              placeholder="travellingFrom"
+              id="travellingFrom"
+              [(ngModel)]="travellingFrom"
+              name="Travelling From"
+            />
+          </mat-form-field>
+        <br/>
+          <mat-form-field appearance="fill">
+            <input
+              matInput
+              placeholder="travellingTo"
+              id="travellingTo"
+              [(ngModel)]="travellingTo"
+              name="Travelling To"
+            />
+          </mat-form-field>
+          <br/>
+
+          <mat-form-field appearance="fill">
+            <label>StartDate</label>
+            <input
+              matInput
+              placeholder="StartDate"
+              [ngModelOptions]="{ standalone: true }"
+              class="form-control"
+              name="StartDate"
+              type="datetime-local"
+              [(ngModel)]="StartDate"
+              required
+            /> </mat-form-field
+          ><br />
+
+
+          <mat-form-field appearance="fill">
+            <label>EndDate</label>
+            <input
+              matInput
+              placeholder="EndDate"
+              [ngModelOptions]="{ standalone: true }"
+              class="form-control"
+              name="EndDate"
+              type="datetime-local"
+              [(ngModel)]="EndDate"
+              required
+            /> </mat-form-field
+          ><br />
+
+        <mat-form-field appearance="fill">
+            <mat-label>Number Of Adults</mat-label>
+            <mat-select [(ngModel)]="Adults" name="Adults">
+                <mat-option value="1">1 </mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+            </mat-select>
+        </mat-form-field><br />
+        <mat-form-field appearance="fill">
+            <mat-label>Number Of Children</mat-label>
+            <mat-select [(ngModel)]="Children" name="Children">
+                <mat-option value="0">0 </mat-option>
+                <mat-option value="1">1 </mat-option>
+                <mat-option value="2">2</mat-option>
+                <mat-option value="3">3</mat-option>
+                <mat-option value="4">4</mat-option>
+            </mat-select>
+        </mat-form-field><br />
+        <mat-form-field appearance="fill">
+            <mat-label>Travel Package Type</mat-label>
+            <mat-select [(ngModel)]="PackageType" name="PackageType">
+                <mat-option value="1">Travel Only </mat-option>
+                <mat-option value="2">Travel With Accomodation </mat-option>
+            </mat-select>
+        </mat-form-field><br />
+
+
+        <mat-form-field appearance="fill">
+            <input
+              matInput
+              placeholder="ContactNumber"
+              id="contactNumber"
+              [(ngModel)]="ContactNumber"
+              name="ContactNumber"
+            />
+          </mat-form-field>
+        <br/>
+        <p>
+            <button type="submit" mat-raised-button color="primary">Submit</button>
+        </p>
+    </form>
+</div>

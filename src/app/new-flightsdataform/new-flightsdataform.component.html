@@ -1,0 +1,77 @@
+<div id="myDiv">
+  <h3>{{ mode }}New Flightsdata Form</h3>
+  <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        placeholder="From"
+        id="From"
+        [(ngModel)]="From"
+        name="From"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <input
+        matInput
+        placeholder="To Where"
+        id="towhere"
+        [(ngModel)]="Towhere"
+        name="towhere"
+      />
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <mat-label>Trip</mat-label>
+      <mat-select [(ngModel)]="Trip" name="trip">
+        <mat-option value="Round Trip">Round Trip </mat-option>
+        <mat-option value="One way">One way</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br />
+    <mat-form-field appearance="fill">
+      <label>Depart</label>
+      <input
+        matInput
+        placeholder="Depart"
+        [ngModelOptions]="{ standalone: true }"
+        class="form-control"
+        name="Depart"
+        type="datetime-local"
+        [(ngModel)]="Depart"
+        required
+      /> </mat-form-field
+    ><br />
+    <mat-form-field appearance="fill">
+      <label>Return</label>
+      <input
+        matInput
+        placeholder="Return"
+        [ngModelOptions]="{ standalone: true }"
+        class="form-control"
+        name="Return"
+        type="datetime-local"
+        [(ngModel)]="Return"
+        required
+      /> </mat-form-field
+    ><br />
+    <mat-form-field appearance="fill">
+      <mat-label>People</mat-label>
+      <input
+        matInput
+        placeholder="people"
+        id="people"
+        [(ngModel)]="people"
+        name="people"
+        type="number"
+        min="01"
+        max="20"
+        required
+      />
+    </mat-form-field>
+
+    <p>
+      <button type="submit" mat-raised-button color="primary">Submit</button>
+    </p>
+  </form>
+</div>

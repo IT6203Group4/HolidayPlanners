@@ -1,0 +1,53 @@
+<div align="center"  >
+  <table>
+    <thead style="font-weight: bold; font-size: 15px">
+      <tr>
+        <th>Itinerary Id</th>
+        <th>From</th>
+        <th>To</th>
+        <th>StartDate</th>
+        <th>EndDate</th>
+        <th>Adults</th>
+        <th>Children</th>
+        <th>PackageType</th>
+        <th>Phone Number</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tr *ngFor="let itinerary of itinerariesData; let i = index">
+      <td>
+        {{ itinerary._id }}
+      </td>
+      <td>
+        {{ itinerary.travellingFrom }}
+      </td>
+      <td>
+        {{ itinerary.travellingTo }}
+      </td>
+      <td>
+        {{ itinerary.StartDate }}
+      </td>
+      <td>
+        {{ itinerary.EndDate }}
+      </td>
+      <td>
+        {{ itinerary.Adults }}
+      </td>
+      <td>
+        {{ itinerary.Children }}
+      </td>
+      <td>
+        {{ itinerary.PackageType }}
+      </td>
+      <td>
+        {{ itinerary.ContactNumber }}
+      </td>
+      <td>
+       
+        <button class="btn" (click)="onDelete(itinerary._id)"><i class="fa fa-trash"></i> Delete</button>
+        <button class="btn1"  [routerLink]="['/editItinerary', itinerary._id]"><i class="fa fa-trash"></i> Update</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,33 @@
+<div>
+  <div align="center">
+    <table>
+      <thead style="font-weight: bold; font-size: 15px">
+        <tr>
+          <th>FlightID</th>
+          <th>From</th>
+          <th>Towhere</th>
+          <th>Trip</th>
+          <th>Depart</th>
+          <th>Return</th>
+          <th>people</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tr *ngFor="let flight of flightsdata; let i = index">
+        <td>{{ flight._id }}</td>
+        <td>{{ flight.From }}</td>
+        <td>{{ flight.Towhere }}</td>
+        <td>{{ flight.Trip }}</td>
+        <td>{{ flight.Depart }}</td>
+        <td>{{ flight.Return }}</td>
+        <td>{{ flight.people }}</td>
+        <td>
+
+
+          <button class="btn" (click)="onDelete(flight._id)"><i class="fa fa-trash"></i> Delete</button>
+          <button class="btn1"  [routerLink]="['/editFlight', flight._id]"><i class="fa fa-trash"></i> Update</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
